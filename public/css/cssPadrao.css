@@ -1,0 +1,29 @@
+#header{
+	width:100%;
+	padding-top: 10px;
+	/* altura da div */
+	height:25%;
+	/* Cor de fundo da div */
+	background-color:#F0F8FF;
+	text-align: center;
+	font-family: "Times New Roman";
+}
+#conteudo{
+	/*a largura da div*/
+	width:100%;
+	/* altura da div */
+	height:75%;
+	/* Cor de fundo da div */
+	text-align: center;
+	background-color:#F0F8FF;
+	font-family: "Times New Roman";
+} 
+a{
+  text-align: center;
+  text-decoration: none;
+  color:black;
+}
+a:hover{ /*Estilo quando o mouse está sobre aquele elemento*/
+  text-decoration: none;
+  color:white;
+}

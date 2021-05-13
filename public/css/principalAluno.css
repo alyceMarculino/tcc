@@ -1,0 +1,49 @@
+* { /*zerando as configurações padroes das ferramentas*/
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body>h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: 0px;
+}
+nav{
+  background-color: gray;
+}
+ul{
+  display: flex;
+  list-style: none;
+  margin: 0px;
+}
+li{
+  flex-grow: 1; /*Espaçamento entre os elementos da lista*/
+}
+a{
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+a:hover{ /*Estilo quando o mouse está sobre aquele elemento*/
+  background-color: black;
+  color: white;
+}
+main{
+  padding: 2rem; /*Margem interna*/
+  background-color: orange;
+}
+p{
+  width: 50%;
+  margin:auto; /*margem externa*/
+}
+.ativo{
+  background-color: black;
+  color: white;
+}

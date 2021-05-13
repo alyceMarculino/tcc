@@ -1,0 +1,37 @@
+* { /*zerando as configurações padroes das ferramentas*/
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.titulo{
+	text-align: center;
+	font-size: 2rem;
+	margin: 3rem auto;
+	color: green;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	gap:0.5rem;
+	align-items: center;
+} 
+
+.bloco{
+	display: flex;
+	width: 350px;
+	margin:auto;
+	gap:0.5rem;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+img{
+	height: 150px;
+}
+
+.btn{
+	min-width: 150px;
+}

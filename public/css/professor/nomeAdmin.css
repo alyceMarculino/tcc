@@ -1,0 +1,23 @@
+#accordion{
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+.alert{
+  text-align: center;
+}
+
+.card-header{
+  border: 1px solid #b4eeaf;
+  background-color: white;
+  color:black;
+}
+
+.headerColapseProfessor{
+  display: flex;
+  justify-content: space-between;
+}
+
+.table{
+ text-align: center;
+}
