@@ -4,7 +4,7 @@
 @endsection
 
 @section('conteudo')
-<div class="container">      
+<div class="container-materias">      
   <a href="{{route('cursoConsulta', [5])}}" class="btn btn-outline-success">
     <img src="{{asset('img/aluno/iconePort.png')}}">
     <p class="mt-1"> Portugues </p>

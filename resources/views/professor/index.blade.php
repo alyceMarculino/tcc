@@ -5,25 +5,25 @@
 @endsection
 
 @section('conteudo')
-  <section class="container">
+  <section class="container-input">
     <select class="professorPesquisado">
       <option value="default" selected="selected">Selecione o nome do professor</option>
     </select>
-
   </section>
 
   <section id="dadosProfessor" class="container d-none">
     <h2> Professor: <span id="nomeProfessor">  </span> </h2>
     <div class="alert alert-warning d-none">
-      <p>Professor não possui permanencia</p>
+      <p> Professor não possui permanência até o momento. </p>
     </div>
 
-    <div>
-      <table id="tabelaPermanencia" class="table table-bordered table-hover mt-3 d-none">
-        <thead>
+    <div class="table-responsive">
+      <table id="tabelaPermanencia" class="table table-bordered table-striped mt-3 d-none">
+        <thead class="thead-dark">
           <tr>
             <th scope="col">Dia</th>
-            <th scope="col">Horario</th>
+            <th scope="col">Inicio</th>
+            <th scope="col">Termino</th>
             <th scope="col">Sala</th>
           </tr>
         </thead>
@@ -86,6 +86,7 @@
             `
               <tr>
                 <td>${dado.dia}</td>
+                <td>${dado.hora}</td>
                 <td>${dado.hora}</td>
                 <td>${dado.sala}</td>
               </tr>
