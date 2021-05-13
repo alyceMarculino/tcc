@@ -14,9 +14,6 @@
       </div>
     </div>
 
-
-
-
     <div class="card mt-4 shadow-sm">
       <img src="{{asset('img/aluno/1.png')}}">
       <div class="card-body">
