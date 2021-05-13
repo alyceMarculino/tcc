@@ -1,0 +1,29 @@
+* { /*zerando as configurações padroes das ferramentas*/
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.listaDeProfessores{
+  text-align: center;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.professor{
+  display: flex;
+  border: #28a745 1px solid;
+  border-radius: 4px;
+  height: 60px;
+  gap:1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+p{
+  box-sizing: content-box;
+  display: contents;
+  font-weight: bold;
+}

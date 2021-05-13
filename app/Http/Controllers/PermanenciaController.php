@@ -29,7 +29,8 @@ class PermanenciaController extends Controller {
     }
     $permanencia->professor_id = $request->input('idDoProfessor');
     $permanencia->dia = $request->input('diaDaSemana');
-    $permanencia->hora = $request->input('horario');
+    $permanencia->horaInicio = $request->input('horaInicio');
+    $permanencia->horaFinal = $request->input('horaFinal');
     $permanencia->sala = $request->input('salaDaPermanencia');
     $permanencia->save();
     return redirect('/professorAdmin');

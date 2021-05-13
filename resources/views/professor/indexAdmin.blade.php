@@ -27,7 +27,8 @@
                 <thead>
                   <tr>
                     <th scope="col">Dia</th>
-                    <th scope="col">Horario</th>
+                    <th scope="col">Inicio</th>
+                    <th scope="col">Final</th>
                     <th scope="col">Sala</th>
                     <th scope="col">Ações</th>
                   </tr>
@@ -37,7 +38,8 @@
                   @foreach ($professor->permanencias as $permanencia)
                     <tr>
                       <td scope="row">{{$permanencia->dia}}</td>
-                      <td>{{$permanencia->hora}}</td>
+                      <td>{{$permanencia->horaInicio}}</td>
+                      <td>{{$permanencia->horaFinal}}</td>
                       <td>{{$permanencia->sala}}</td>
                       <td >
                         <a href='/permanencia/edita/{{$permanencia->id}}' type="button" 

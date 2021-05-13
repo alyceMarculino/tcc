@@ -21,7 +21,7 @@ Route::get('/aluno', 'AlunoController@index')->name('alunoIndex');
 /* Paginas de professor*/
 Route::get('/professor', 'ProfessorController@index')->name('professorIndex');
 Route::any('/professor/buscaProfessor', 'ProfessorController@pegarProfessor')->name('pegarProfessor');
-Route::get('/professor/buscaProfessor/{id}', 'ProfessorController@pegarPermanencia')->name('pegarPermanencia');
+Route::get('/professor/buscaProfessor/{id}', 'ProfessorController@verPermanencia2')->name('pegarPermanencia');
 
 /* Paginas de curso */
 Route::get('/curso', 'AreaController@index')->name('areaIndex');

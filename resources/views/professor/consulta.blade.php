@@ -19,7 +19,8 @@
       @foreach ($professor->permanencias as $permanencia)
         <tr>
           <td scope="row">{{$permanencia->dia}}</td>
-          <td>{{$permanencia->hora}}</td>
+          <td>{{$permanencia->horaInicio}}</td>
+          <td>{{$permanencia->horaFinal}}</td>
           <td>{{$permanencia->sala}}</td>
         </tr>
       @endforeach

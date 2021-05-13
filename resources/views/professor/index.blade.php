@@ -86,8 +86,8 @@
             `
               <tr>
                 <td>${dado.dia}</td>
-                <td>${dado.hora}</td>
-                <td>${dado.hora}</td>
+                <td>${dado.horaInicio}</td>
+                <td>${dado.horaFinal}</td>
                 <td>${dado.sala}</td>
               </tr>
             `
