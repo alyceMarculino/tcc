@@ -54,7 +54,7 @@ class ProfessorController extends Controller {
   
   public function verPermanencia2($id){
     $professor = Professor::find($id);
-    return view('permanencia.consulta')-> with('professor', $professor);
+    return view('permanencia.consulta', compact('professor'));
   }
 
   public function cadastro(){

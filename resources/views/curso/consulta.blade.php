@@ -8,7 +8,7 @@
     <h2> Lista de Professores do {{$area->nome}} </h2>
     @foreach ($area->professores as $professor)
       <div class="professor">
-        <p> {{$professor->nome_usual }} - {{$professor->id}} </p>
+        <p> {{$professor->nome_usual }} </p>
         <a href="{{route('pegarPermanencia', [$professor->id])}}"  type="button" class="btn btn-outline-dark">Ver Horario</a>
       </div>  
     @endforeach

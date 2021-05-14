@@ -10,7 +10,8 @@
     <thead>
       <tr>
         <th scope="col">Dia</th>
-        <th scope="col">Horario</th>
+        <th scope="col">Inicio</th>
+        <th scope="col">Final</th>
         <th scope="col">Sala</th>
       </tr>
     </thead>
