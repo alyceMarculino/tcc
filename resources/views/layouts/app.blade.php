@@ -3,15 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>IFMS</title>
-  <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-  <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-  <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   @yield('styles')
 </head>
@@ -25,7 +21,6 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
             @if(Auth::check())
             <li class="nav-item dropdown">
@@ -33,8 +28,8 @@
                 Consultas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{route('permanenciaListar')}}">Consultar Todas as Permanencias</a>
-                <a class="dropdown-item" href="{{ route('professorIndexAdmin')}}">Consultar Horarios Por Nome</a>
+                <!-- <a class="dropdown-item" href="{{route('permanenciaListar')}}">Consultar Todas as Permanencias</a> -->
+                <a class="dropdown-item" href="{{ route('professorIndexAdmin')}}">Consultar Horarios Dos Professores</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -43,7 +38,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('professorCadastro') }}">Cadastrar Professor</a>
-                <a class="dropdown-item" href="{{ route('permanenciaCadastro') }}">Cadastrar Permanencias</a>
+                <a class="dropdown-item" href="{{ route('permanenciaCadastro') }}">Cadastrar Permanencias</a>              
+                <a class="dropdown-item" href="{{ route('registrarNovoAdmin') }}">Cadastrar Novo Administrador</a>
               </div>
             </li>
             @endif
@@ -56,11 +52,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">Entrar</a>
               </li>
-            @if (Route::has('register'))
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">Registrar</a>
-              </li>
-            @endif
+            
             @else
               <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

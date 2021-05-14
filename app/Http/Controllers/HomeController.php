@@ -24,4 +24,8 @@ class HomeController extends Controller {
     $professores = Professor::all();
     return view('professor.indexAdmin')-> with('professores', $professores);
   }
+
+  public function registrar(){
+    return view('auth.register');
+  }
 }

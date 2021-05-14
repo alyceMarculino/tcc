@@ -51,3 +51,4 @@ Route::get('/areadamateria/listagem', 'AreaController@listaAdmin')->name('listag
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::any('/registrar', 'HomeController@registrar')->name('registrarNovoAdmin')->middleware('auth');
