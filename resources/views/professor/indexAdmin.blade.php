@@ -1,30 +1,33 @@
 @extends('layouts.app')
 @section('styles')
-
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{asset('css/professor/nomeAdmin.css')}}">
 @endsection
 
 @section('content')
-  <div class="alert alert-success" role="alert">
-    Abaixo terá a tabela com os horarios dos professores cadastrados no sistema com seus respectivos horarios de permanencia, clique no nome para expandir.
+  <div class="alert alert-info" role="alert">
+    Abaixo terá a tabela com os horarios dos professores cadastrados 
+    no sistema com seus respectivos horarios de permanencia, 
+    clique no nome para expandir e aparecer os horarios de permanencias.
   </div>
+
   <div id="accordion">
     @foreach ($professores as $professor)
       <div class="card mt-2">
         <div class="card-header" id="heading{{$professor->id}}">
           <h5 class="mb-0 headerColapseProfessor">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{$professor->id}}" aria-expanded="false" aria-controls="collapse{{$professor->id}}">
+            <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{$professor->id}}" aria-expanded="false" aria-controls="collapse{{$professor->id}}">
             {{$professor->nome}}
-            </button>
-            <a href='/professor/edita/{{$professor->id}}' type="button" class="btn btn-outline-success">Editar Dados do Professor</a>
+            </a>
+            <a href='/professor/edita/{{$professor->id}}' type="button" class="btn btn-outline-info">Editar Dados do Professor</a>
           </h5>
         </div>
 
         <div id="collapse{{$professor->id}}" class="collapse" aria-labelledby="heading{{$professor->id}}" data-parent="#accordion">
           <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered border-primary">
-                <thead>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead class="thead-dark">
                   <tr>
                     <th scope="col">Dia</th>
                     <th scope="col">Inicio</th>
@@ -43,7 +46,7 @@
                       <td>{{$permanencia->sala}}</td>
                       <td >
                         <a href='/permanencia/edita/{{$permanencia->id}}' type="button" 
-                          class="btn btn-outline-warning">Editar </a>
+                          class="btn btn-outline-primary">Editar </a>
                         <a href='/permanencia/delete/{{$permanencia->id}}'type="button" 
                           class="btn btn-outline-danger">Apagar</a>
                       </td>
@@ -56,5 +59,8 @@
         </div>
       </div>
     @endforeach
-  </div>
+    <div class="linksDePaginacao">
+      {{$professores->links()}}
+    </div>
+  </>
 @endsection

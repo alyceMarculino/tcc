@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Professor;
 use App\Permanencia;
 use App\Area;
@@ -16,9 +17,8 @@ class ProfessorController extends Controller {
   }
 
   public function indexAdmin(){
-    $professores = Professor::all();
-    $area = Area::all();
-    return view('professor.indexAdmin', compact('professores', 'area'));
+    $professores = Professor::paginate(5);
+    return view('professor.indexAdmin', compact('professores'));
   }
 
   public function pegarProfessor(Request $request){
