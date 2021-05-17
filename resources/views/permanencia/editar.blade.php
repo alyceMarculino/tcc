@@ -8,17 +8,14 @@
     <form action="{{route('permanenciaSalvar')}}" method="POST">
       @csrf
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-sm-2">
             <label for="id" class="visually-hidden"> Identificar do Sistema </label>
-            <input readonly type="text" class="form-control" id="id" name="id" value="">
+            <input readonly type="text" class="form-control" id="id" name="id" value="{{$permanencia->id}}">
           </div>
           <div class="col">
-            <label for="idDoProfessor" class="visually-hidden"> Selecione o Professor </label>
-            <select class="form-control" name="idDoProfessor" >
-              @foreach($professores as $professor)
-                <option value="{{$professor->id}}">{{$professor->nome}}</option>
-              @endforeach
-            </select>
+            <label for="id" class="visually-hidden"> Identificar do Professor </label>
+            <input readonly type="text" class="form-control" id="idDoProfessor" name="idDoProfessor" value="{{$permanencia->professor_id}}">
+            <div id="nomeHelp" class="form-text">Você não pode alterar o professor da permanência.</div>
           </div>
         </div>
 
@@ -26,6 +23,7 @@
         <div class="col">
           <label for="diaDaSemana" class="visually-hidden"> Selecione o dia da Semana </label>
           <select class="form-control" id="diaDaSemana" name="diaDaSemana">
+            <option value="{{old('dia', $permanencia->dia)}}"> {{old('dia', $permanencia->dia)}} </option>
             <option value="Segunda"> Segunda </option>
             <option value="Terça"> Terça </option>
             <option value="Quarta"> Quarta </option>
@@ -36,6 +34,8 @@
         <div class="col">
           <label for="horaInicio" class="visually-hidden"> Hora Inicial </label>
           <select class="form-control" id="horaInicio" name="horaInicio">
+            <option value="{{old('horaInicio', $permanencia->horaInicio)}}"> {{old('horaInicio', $permanencia->horaInicio)}} </option>
+
             <optgroup label="Manhã">
               <option value="07:00">07hrs</option>
               <option value="07:45">07:45hrs</option>
@@ -69,6 +69,8 @@
         <div class="col">
           <label for="horaFinal" class="visually-hidden"> Hora de Termino </label>
           <select class="form-control" id="horaFinal" name="horaFinal">
+            <option value="{{old('horaFinal', $permanencia->horaFinal)}}"> {{old('horaFinal', $permanencia->horaFinal)}} </option>
+
             <optgroup label="Manhã">
               <option value="07:45">07:45hrs</option>
               <option value="08:30">08:30hrs</option>
@@ -97,10 +99,10 @@
             </optgroup>
           </select>
         </div>
-
         <div class="col">
           <label for="salaDaPermanencia" class="visually-hidden"> Sala de Permanência </label>
           <select class="form-control" id="salaDaPermanencia" name="salaDaPermanencia">
+            <option value="{{old('sala', $permanencia->sala)}}"> {{old('sala', $permanencia->sala)}} </option>
             <option value="A101"> A101 </option>
             <option value="B101"> B101 </option>
             <option value="C101"> C101 </option>
@@ -113,7 +115,7 @@
       <div class="row mt-4">
         <div class="col botaoEsquerda">
           <p></p>
-          <button type="submit" id="adicionarHorario" onClick="adcPermanencia()" class="btn btn-outline-success">Adicionar Permanência</button>
+          <button type="submit" id="adicionarHorario" onClick="adcPermanencia()" class="btn btn-outline-success">Editar Permanência</button>
         </div>
       </div>
     </form>    

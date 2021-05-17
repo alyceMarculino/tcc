@@ -5,16 +5,6 @@
 
 @section('content')
 <div class="container">
-  @if ($errors->any())
-    <div class="alert alert-danger">
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-  @endif
-
   <form action="{{route('professorSalvar')}}" method="POST">
     @csrf
     <div class="form-row ">
@@ -41,7 +31,7 @@
         <label for="idDaArea" class="visually-hidden"> Aréa de Atuação </label>
         <select class="form-control" name="idDaArea">
           @foreach($areas as $area)
-          <option value="{{$area->id}} {{old('areadamateria_id', $professor->areadamateria_id) == $area->id? 'selected' : ''}}">{{$area->nome}}</option>
+          <option value="{{$area->id}} {{old('areadamateria_id', $professor->areadamateria_id) == $area->id ? 'selected' : ''}}">{{$area->nome}}</option>
           @endforeach
         </select>
       </div>

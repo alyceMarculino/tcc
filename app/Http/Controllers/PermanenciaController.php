@@ -40,7 +40,7 @@ class PermanenciaController extends Controller {
     $professores = Professor::all();
     $areas = Area::all();
     $permanencia = Permanencia::find($id);
-    return view('permanencia.cadastro', compact('professores', 'areas', 'permanencia'));
+    return view('permanencia.editar', compact('professores', 'areas', 'permanencia'));
   }
 
   public function excluir($id) {
