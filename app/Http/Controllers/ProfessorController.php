@@ -17,7 +17,7 @@ class ProfessorController extends Controller {
   }
 
   public function indexAdmin(){
-    $professores = Professor::paginate(5);
+    $professores = Professor::orderBy('nome', 'asc')->paginate(10);
     return view('professor.indexAdmin', compact('professores'));
   }
 
