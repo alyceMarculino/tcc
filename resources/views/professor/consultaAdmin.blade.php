@@ -12,7 +12,7 @@
   </section>
 
   <section id="dadosProfessor" class="container d-none">
-    <h2> Professor: <span id="nomeProfessor">  </span> </h2>
+    <h2> Professor(a): <span id="nomeProfessor">  </span> </h2>
     <div class="alert alert-warning d-none">
       <p> Professor não possui permanência até o momento. </p>
     </div>
