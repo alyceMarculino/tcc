@@ -7,14 +7,9 @@
 <div class="container-materias">      
   <a href="{{route('cursoConsulta', [5])}}" class="btn btn-outline-success">
     <img src="{{asset('img/aluno/iconePort.png')}}">
-    <p class="mt-1"> Portugues </p>
+    <p class="mt-1"> Port. Inglês e Espanhol </p>
   </a>     
-      
-  <a href="{{route('cursoConsulta', [6])}}" class="btn btn-outline-success">
-    <img src="{{asset('img/aluno/iconesIngles.png')}}">
-    <p class="mt-1"> Inglês </p>
-  </a>     
-
+     
   <a href="{{route('cursoConsulta', [7])}}" class="btn btn-outline-success">
     <img src="{{asset('img/aluno/iconeEdFisica.png')}}">
     <p class="mt-1"> Educação Física </p>
@@ -64,6 +59,31 @@
     <img src="{{asset('img/aluno/iconeSociologia.png')}}">
     <p class="mt-1"> Sociologia </p>
   </a> 
+
+  <a href="{{route('cursoConsulta', [17])}}" class="btn btn-outline-success">
+    <img src="{{asset('img/aluno/iconesIngles.png')}}">
+    <p class="mt-1"> Educação Especial </p>
+  </a>   
+
+  <a href="{{route('cursoConsulta', [18])}}" class="btn btn-outline-success">
+    <img src="{{asset('img/aluno/iconePedagogia.png')}}">
+    <p class="mt-1"> Pedagogia </p>
+  </a>   
+
+  <a href="{{route('cursoConsulta', [19])}}" class="btn btn-outline-success">
+    <img src="{{asset('img/aluno/iconeAdministracao.png')}}">
+    <p class="mt-1"> Administração </p>
+  </a>   
+
+  <a href="{{route('cursoConsulta', [20])}}" class="btn btn-outline-success">
+    <img src="{{asset('img/aluno/iconeMetodologia.png')}}">
+    <p class="mt-1"> Metodologia </p>
+  </a>  
+
+  <a href="{{route('cursoConsulta', [21])}}" class="btn btn-outline-success">
+    <img src="{{asset('img/aluno/iconePiano.png')}}">
+    <p class="mt-1"> Piano/Música </p>
+  </a>   
   
 </div>
 @endsection

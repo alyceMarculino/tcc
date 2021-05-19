@@ -6,24 +6,29 @@
 
 .listaDeProfessores{
   text-align: center;
-  margin: 1rem auto;
+  margin: 2rem auto;
   width: 80%;
 }
 
-.professor{
-  display: flex;
-  border: #28a745 1px solid;
-  border-radius: 4px;
-  height: 60px;
-  gap:1rem;
+#accordion{
+  margin: 0 auto;
   align-items: center;
-  justify-content: space-between;
-  margin: 10px auto;
-  padding: 0 10px;
 }
 
-p{
-  box-sizing: content-box;
-  display: contents;
-  font-weight: bold;
+.card{
+  border: 1px solid;
+  border-color: #0275d8;
+}
+
+.card-header{
+  background-color: white;
+}
+
+.headerColapseProfessor{
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
 }

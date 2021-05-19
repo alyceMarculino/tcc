@@ -22,7 +22,7 @@ Route::get('/aluno', 'AlunoController@index')->name('alunoIndex');
 Route::get('/professor', 'ProfessorController@index')->name('professorIndex');
 Route::any('/professor/buscaProfessor', 'ProfessorController@pegarProfessor')->name('pegarProfessor');
 Route::any('/professor/buscaProfessor/{id}', 'ProfessorController@pegarPermanencia');
-Route::get('/professor/pegarPermanencias/{id}', 'ProfessorController@verPermanencia2')->name('pegarPermanencia');
+Route::get('/professor/pegarPermanencias/{id}', 'ProfessorController@verPermanencia')->name('pegarPermanencia');
 
 /* Paginas de curso */
 Route::get('/curso', 'AreaController@index')->name('areaIndex');
@@ -48,7 +48,6 @@ Route::get('/professor/delete/{id}', 'ProfessorController@excluir')->middleware(
 // Administrador Parte de Materias
 /* Paginas de tipo de materias */
 Route::get('/areadamateria/listagem', 'AreaController@listaAdmin')->name('listagem')->middleware('auth');
-
 
 Auth::routes();
 

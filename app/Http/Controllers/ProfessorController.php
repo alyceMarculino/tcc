@@ -17,7 +17,7 @@ class ProfessorController extends Controller {
   }
 
   public function indexAdmin(){
-    $professores = Professor::orderBy('nome', 'asc')->paginate(10);
+    $professores = Professor::orderBy('nome', 'asc')->paginate(25);
     return view('professor.indexAdmin', compact('professores'));
   }
 
@@ -26,7 +26,7 @@ class ProfessorController extends Controller {
     return view('professor.consultaAdmin')-> with('professores', $professores);
   }
 
-  public function verPermanencia2($id){
+  public function verPermanencia($id){
     $professor = Professor::find($id);
     return view('permanencia.consulta', compact('professor'));
   }
