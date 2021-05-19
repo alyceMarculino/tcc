@@ -21,6 +21,7 @@ Route::get('/aluno', 'AlunoController@index')->name('alunoIndex');
 /* Paginas de professor*/
 Route::get('/professor', 'ProfessorController@index')->name('professorIndex');
 Route::any('/professor/buscaProfessor', 'ProfessorController@pegarProfessor')->name('pegarProfessor');
+Route::any('/professor/buscaProfessor/{id}', 'ProfessorController@pegarPermanencia');
 Route::get('/professor/pegarPermanencias/{id}', 'ProfessorController@verPermanencia2')->name('pegarPermanencia');
 
 /* Paginas de curso */
@@ -39,6 +40,7 @@ Route::get('/permanencia/edita/{id}', 'PermanenciaController@editar')->middlewar
 Route::get('/permanencia/delete/{id}', 'PermanenciaController@excluir')->middleware('auth');
 // Administrador Parte do Professor
 Route::get('/professorAdmin', 'ProfessorController@indexAdmin')->name('professorIndexAdmin')->middleware('auth');
+Route::get('/professorAdmin/consultaNome', 'ProfessorController@consultaAdmin')->name('consultaNomeAdmin')->middleware('auth');
 Route::get('/professor/cadastro', 'ProfessorController@cadastro')->name('professorCadastro')->middleware('auth');
 Route::post('/professor/salvar', 'ProfessorController@salvar')->name('professorSalvar')->middleware('auth');
 Route::get('/professor/edita/{id}', 'ProfessorController@editar')->middleware('auth');

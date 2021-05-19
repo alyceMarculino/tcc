@@ -21,8 +21,8 @@ class HomeController extends Controller {
    * @return \Illuminate\Contracts\Support\Renderable
    */
   public function index() {
-    $professores = Professor::all();
-    return view('professor.indexAdmin')-> with('professores', $professores);
+    $professores = Professor::orderBy('nome', 'asc')->paginate(10);
+    return view('professor.indexAdmin', compact('professores'));
   }
 
   public function registrar(){

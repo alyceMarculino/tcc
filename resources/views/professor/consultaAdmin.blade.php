@@ -1,10 +1,10 @@
-@extends('layout.index_nav')
+@extends('layouts.app')
 @section('styles')
-  <link rel="stylesheet" href="{{asset('css/professor/nome.css')}}">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{asset('css/professor/nome.css')}}">
 @endsection
 
-@section('conteudo')
+@section('content')
   <section class="container-input">
     <select class="professorPesquisado">
       <option value="default" selected="selected">Selecione o nome do professor</option>

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>IFMS</title>
-  <script src="{{ asset('js/app.js') }}" defer></script>
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+  <link href="{{ asset('css/app.css') }}" 
+  rel="stylesheet">
   @yield('styles')
 </head>
 <body>
@@ -28,8 +29,8 @@
                 Consultas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <!-- <a class="dropdown-item" href="{{route('permanenciaListar')}}">Consultar Todas as Permanencias</a> -->
-                <a class="dropdown-item" href="{{ route('professorIndexAdmin')}}">Consultar Horarios Dos Professores</a>
+                <a class="dropdown-item" href="{{route('professorIndexAdmin')}}">Consultar Todas as Permanencias</a>
+                <a class="dropdown-item" href="{{ route('consultaNomeAdmin')}}">Consultar Horarios Por Nome</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -83,6 +84,10 @@
       <p class="mt-5 mb-3 text muted text-center"> © Alyce Marculino - 2020 </p>
     </footer>
   </div>
-  
+
+  <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+  @yield('javascript')
 </body>
 </html>

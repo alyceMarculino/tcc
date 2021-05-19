@@ -21,37 +21,11 @@ class ProfessorController extends Controller {
     return view('professor.indexAdmin', compact('professores'));
   }
 
-  public function pegarProfessor(Request $request){
-    $search = !empty($request->term) ? $request->term : '' ;
+  public function consultaAdmin(){
+    $professores = Professor::orderBy('nome', 'asc')->get();
+    return view('professor.consultaAdmin')-> with('professores', $professores);
+  }
 
-    if($search == ''){
-      $professores = Professor::orderBy('nome', 'asc')
-      ->select("id", "name")
-      ->limit(10)
-      ->get();
-    }
-    else{
-      $professores = Professor::orderBy('nome', 'asc')
-      ->where("nome", "like", "%".$search."%")
-      ->limit(10)
-      ->get();
-    }
-    $response = array();
-    foreach ($professores as $professor) {
-      $response[]= array(
-        "id" => $professor->id,
-        "text" => $professor->nome,
-      );
-    }
-    return response()->json(["results" => $response]);
-  }
-  
-  public function pegarPermanencia($id){
-    $professor = Professor::find($id);
-    return response()->json(["professor" => $professor,
-    "permanencias" => $professor->permanencias]);
-  }
-  
   public function verPermanencia2($id){
     $professor = Professor::find($id);
     return view('permanencia.consulta', compact('professor'));
@@ -83,5 +57,33 @@ class ProfessorController extends Controller {
     $areas = Area::all();
     return view('professor.cadastro', compact('professor', 'areas'));
   }   
+
+  public function pegarProfessor(Request $request){
+    $search = !empty($request->term) ? $request->term : '' ;
+
+    if($search == ''){
+      return;
+    }
+    else{
+      $professores = Professor::orderBy('nome', 'asc')
+      ->where("nome", "like", "%".$search."%")
+      ->limit(10)
+      ->get();
+    }
+    $response = array();
+    foreach ($professores as $professor) {
+      $response[]= array(
+        "id" => $professor->id,
+        "text" => $professor->nome,
+      );
+    }
+    return response()->json(["results" => $response]);
+  }
+  
+  public function pegarPermanencia($id){
+    $professor = Professor::find($id);
+    return response()->json(["professor" => $professor,
+    "permanencias" => $professor->permanencias]);
+  }
   
 }
