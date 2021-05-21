@@ -13,28 +13,29 @@ class ProfessorController extends Controller {
 
   public function index(){
     $professores = Professor::orderBy('nome', 'asc')->get();
-    return view('professor.index')-> with('professores', $professores);
+    return view('publicas.professor.index')-> with('professores', $professores);
   }
 
   public function indexAdmin(){
     $professores = Professor::orderBy('nome', 'asc')->paginate(25);
-    return view('professor.indexAdmin', compact('professores'));
-  }
-
-  public function consultaAdmin(){
-    $professores = Professor::orderBy('nome', 'asc')->get();
-    return view('professor.consultaAdmin')-> with('professores', $professores);
-  }
-
-  public function verPermanencia($id){
-    $professor = Professor::find($id);
-    return view('permanencia.consulta', compact('professor'));
+    return view('administrador.professor.listagem', compact('professores'));
   }
 
   public function cadastro(){
     $professor = new Professor();
     $areas = Area::all();
-    return view('professor.cadastro', compact('professor', 'areas') );
+    return view('administrador.professor.cadastro', compact('professor', 'areas'));
+  }
+  
+  public function editar($id) {
+    $professor = Professor::find($id);
+    $areas = Area::all();
+    return view('administrador.professor.cadastro', compact('professor', 'areas'));
+  }   
+
+  public function consultaAdmin(){
+    $professores = Professor::orderBy('nome', 'asc')->get();
+    return view('administrador.professor.consulta')-> with('professores', $professores);
   }
 
   public function salvar(Request $request) {
@@ -49,14 +50,9 @@ class ProfessorController extends Controller {
     $professor->email = $request->input('email');
     $professor->area_id = $request->input('idDaArea');
     $professor->save();
-    return redirect('/professorAdmin');
+    return redirect('/professor/listagem');
   }
 
-  public function editar($id) {
-    $professor = Professor::find($id);
-    $areas = Area::all();
-    return view('professor.cadastro', compact('professor', 'areas'));
-  }   
 
   public function pegarProfessor(Request $request){
     $search = !empty($request->term) ? $request->term : '' ;

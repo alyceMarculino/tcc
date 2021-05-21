@@ -1,12 +1,12 @@
-@extends('layout.index_nav')
+@extends('layouts.nav_aluno')
 
 @section('styles')
   <link href="{{asset('css/aluno/index-aluno.css')}}" rel="stylesheet">
 @endsection
 
-@section('conteudo')
+@section('content')
   <div class="container">
-    <div class="card mt-4 shadow-sm">
+    <div class="card mt-2 shadow-sm">
       <img src="{{asset('img/aluno/2.png')}}">
       <div class="card-body">                 
         <p> Ao ir para Núcleo Comum funciona para que você realize a busca dos professores das materias do núcleo comum do campus. (Ex: Professores de Matematica)</p>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="card mt-4 shadow-sm">
+    <div class="card mt-2 shadow-sm">
       <img src="{{asset('img/aluno/1.png')}}">
       <div class="card-body">
         <p> A busca por Materias Tecnicas funciona para que você realize a busca dos professores das materias especificas do seu curso. (Ex: Professores de Informatica)</p>
@@ -22,8 +22,7 @@
       </div>
     </div>
   
-  
-    <div class="card mt-4 shadow-sm">
+    <div class="card mt-2 shadow-sm">
       <img src="{{asset('img/aluno/3.png')}}">
       <div class="card-body">
         <p> A busca por nome funciona para que você realize a busca pelo nome do seu professor. (Ex: Professora Lia Nara Balta Quinta) </p>

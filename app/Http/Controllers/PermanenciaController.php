@@ -17,7 +17,7 @@ class PermanenciaController extends Controller {
     $professores = Professor::all();
     $areas = Area::all();
     $permanencia = Permanencia::all();
-    return view('permanencia.cadastro', compact('professores', 'areas', 'permanencia'));
+    return view('administrador.permanencia.cadastro', compact('professores', 'areas', 'permanencia'));
   }
 
   public function salvar(Request $request) {
@@ -33,19 +33,19 @@ class PermanenciaController extends Controller {
     $permanencia->horaFinal = $request->input('horaFinal');
     $permanencia->sala = $request->input('salaDaPermanencia');
     $permanencia->save();
-    return redirect('/professorAdmin');
+    return redirect('/professor/listagem');
   }
 
   public function editar($id) {
     $professores = Professor::all();
     $areas = Area::all();
     $permanencia = Permanencia::find($id);
-    return view('permanencia.editar', compact('professores', 'areas', 'permanencia'));
+    return view('administrador.permanencia.editar', compact('professores', 'areas', 'permanencia'));
   }
 
   public function excluir($id) {
     $permanencia = Permanencia::find($id);
     $permanencia->delete();
-    return redirect('/professorAdmin');
+    return redirect('/professor/listagem');
   }
 }

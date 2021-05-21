@@ -1,0 +1,52 @@
+.alert{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#accordion{
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.card{
+  border: 1px solid#0275d8;
+  background-color: white;
+}
+
+.card-header{
+  background-color: white;
+}
+
+.headerColapseProfessor{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+.table{
+ text-align: center;
+}
+
+.linksDePaginacao{
+  margin: 1rem 0;
+  float: right;
+}
+
+@media only screen and (max-width: 650px) {
+  .card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}

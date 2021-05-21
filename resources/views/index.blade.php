@@ -1,4 +1,4 @@
-@extends('layout.index')
+@extends('layouts.index')
 
 @section('styles')
   <link href="{{ asset('css/index.css') }}" rel="stylesheet"> 
@@ -16,7 +16,7 @@
     <div class="bloco">
       <img src="img/iconeAdmin.png">
       <b> Sistema do Administrador </b>
-      <a href="{{route('home')}}" class="btn btn-success"> Sou Administrador </a>
+      <a href="{{route('login')}}" class="btn btn-success"> Sou Administrador </a>
     </div>
   </div>
 @endsection

@@ -8,8 +8,8 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-  <link href="{{ asset('css/app.css') }}" 
-  rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/nav/nav.css')}}">
   @yield('styles')
 </head>
 <body>
@@ -20,7 +20,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             @if(Auth::check())
@@ -80,9 +79,6 @@
       @yield('content')
     </main>
 
-    <footer>
-      <p class="mt-5 mb-3 text muted text-center"> © Alyce Marculino - 2020 </p>
-    </footer>
   </div>
 
   <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>

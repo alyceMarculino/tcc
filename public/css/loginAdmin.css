@@ -1,23 +1,7 @@
-.form-signin {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: auto;
-	align-items:center;
+.card{
+    border-color:#1ba801;
 }
-body {
-    display: flex;
-    align-items: center;
-    padding-top: auto;
+
+.card-header{
+    color: #008000;
 }
-img{
-	align:middle;
-}
-p{
-	text-align:center;
-}
-.btn{
-	width: 100%;
-	background-color:#19882c;
-	color:black;
-}	

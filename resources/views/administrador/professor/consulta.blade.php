@@ -1,10 +1,10 @@
-@extends('layout.index_nav')
+@extends('layouts.nav_admin')
 @section('styles')
-  <link rel="stylesheet" href="{{asset('css/professor/nome.css')}}">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{asset('css/professor/nome.css')}}">
 @endsection
 
-@section('conteudo')
+@section('content')
   <section class="container-input">
     <select class="professorPesquisado">
       <option value="default" selected="selected">Selecione o nome do professor</option>
@@ -25,6 +25,7 @@
             <th scope="col">Inicio</th>
             <th scope="col">Termino</th>
             <th scope="col">Sala</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -90,6 +91,12 @@
                 <td>${dado.horaInicio}</td>
                 <td>${dado.horaFinal}</td>
                 <td>${dado.sala}</td>
+                <td >
+                  <a href='/permanencia/edita/${dado.id}}' type="button" 
+                    class="btn btn-outline-primary">Editar </a>
+                  <a href='/permanencia/delete/${dado.id}}'type="button" 
+                    class="btn btn-outline-danger">Apagar</a>
+                </td>
               </tr>
             `
           )

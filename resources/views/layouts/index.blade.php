@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <main role="main" class="container">
+    <main role="main" class="container mb-2">
       @yield('conteudo')
     </main>
     

@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.nav_admin')
+@section('styles')
+  <link rel="stylesheet" href="{{asset('css/loginAdmin.css')}}">
+@endsection
 
 @section('content')
   <div class="container">

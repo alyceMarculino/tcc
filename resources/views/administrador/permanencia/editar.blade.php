@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.nav_admin')
 @section('styles')
   <link rel="stylesheet" href="{{asset('css/permanencia/cadastro.css')}}">
 @endsection
@@ -8,7 +8,7 @@
     <form action="{{route('permanenciaSalvar')}}" method="POST">
       @csrf
         <div class="row">
-          <div class="col-sm-2">
+          <div class="col-sm-3 col-md-4 col-lg-3">
             <label for="id" class="visually-hidden"> Identificar do Sistema </label>
             <input readonly type="text" class="form-control" id="id" name="id" value="{{$permanencia->id}}">
           </div>
@@ -20,8 +20,8 @@
         </div>
 
       <div class="row mt-4">
-        <div class="col">
-          <label for="diaDaSemana" class="visually-hidden"> Selecione o dia da Semana </label>
+        <div class="col col-sm-12 col-md-3 col-lg-3">
+          <label for="diaDaSemana" class="visually-hidden"> Dia da Semana </label>
           <select class="form-control" id="diaDaSemana" name="diaDaSemana">
             <option value="{{old('dia', $permanencia->dia)}}"> {{old('dia', $permanencia->dia)}} </option>
             <option value="Segunda"> Segunda </option>
@@ -31,8 +31,8 @@
             <option value="Sexta"> Sexta </option>
           </select>
         </div>
-        <div class="col">
-          <label for="horaInicio" class="visually-hidden"> Hora Inicial </label>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <label for="horaInicio" class="visually-hidden"> Hora de Inicio </label>
           <select class="form-control" id="horaInicio" name="horaInicio">
             <option value="{{old('horaInicio', $permanencia->horaInicio)}}"> {{old('horaInicio', $permanencia->horaInicio)}} </option>
 
@@ -66,7 +66,7 @@
           </select>
         </div>
 
-        <div class="col">
+        <div class="col-sm-12 col-md-3 col-lg-3">
           <label for="horaFinal" class="visually-hidden"> Hora de Termino </label>
           <select class="form-control" id="horaFinal" name="horaFinal">
             <option value="{{old('horaFinal', $permanencia->horaFinal)}}"> {{old('horaFinal', $permanencia->horaFinal)}} </option>
@@ -99,8 +99,8 @@
             </optgroup>
           </select>
         </div>
-        <div class="col">
-          <label for="salaDaPermanencia" class="visually-hidden"> Sala de Permanência </label>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <label for="salaDaPermanencia" class="visually-hidden"> Sala </label>
           <select class="form-control" id="salaDaPermanencia" name="salaDaPermanencia">
             <option value="{{old('sala', $permanencia->sala)}}"> {{old('sala', $permanencia->sala)}} </option>
             <option value="A101"> A101 </option>
