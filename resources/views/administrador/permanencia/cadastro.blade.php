@@ -101,11 +101,37 @@
         <div class="col-sm-12 col-md-3 col-lg-3">
           <label for="salaDaPermanencia" class="visually-hidden"> Sala </label>
           <select class="form-control" id="salaDaPermanencia" name="salaDaPermanencia">
-            <option value="A101"> A101 </option>
-            <option value="B101"> B101 </option>
-            <option value="C101"> C101 </option>
-            <option value="D101"> D101 </option>
-            <option value="E101"> E101 </option>
+            <optgroup label="Bloco A">
+              <option value="A104"> A104 </option>
+              <option value="A105"> A105 </option>
+              <option value="A106"> A106 </option>
+              <option value="A202"> A202 </option>
+              <option value="A203"> A203 </option>
+              <option value="A206"> A206 </option>
+            </optgroup>
+            <optgroup label="Bloco B">
+              <option value="B101"> B101 </option>
+            </optgroup>
+            <optgroup label="Bloco C">
+              <option value="C101"> C101 </option>
+            </optgroup>
+            <optgroup label="Bloco D">
+              <option value="D201"> D201 </option>
+              <option value="D202"> D202 </option>
+              <option value="D203"> D203 </option>
+              <option value="D204"> D204 </option>
+              <option value="D205"> D205 </option>
+              <option value="D206"> D206 </option>
+            </optgroup>
+            <optgroup label="Bloco E">
+              <option value="E101"> E101 </option>
+            </optgroup>
+            <optgroup label="Salas Modulares">
+              <option value="Modular 1"> Modular 1 </option>
+              <option value="Modular 2"> Modular 2 </option>
+              <option value="Modular 3"> Modular 3 </option>
+              <option value="Modular 4"> Modular 4 </option>
+            </optgroup>
           </select>
         </div>
       </div>
