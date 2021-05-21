@@ -92,10 +92,12 @@
                 <td>${dado.horaFinal}</td>
                 <td>${dado.sala}</td>
                 <td >
-                  <a href='/permanencia/edita/${dado.id}}' type="button" 
-                    class="btn btn-outline-primary">Editar </a>
-                  <a href='/permanencia/delete/${dado.id}}'type="button" 
-                    class="btn btn-outline-danger">Apagar</a>
+                  <a href='/permanencia/edita/${dado.id}}' type="button" class="btn btn-outline-primary botoesRedondos" title="Editar Permanência">
+                    <img src="{{asset('img/iconesSVG/pen.svg')}}">
+                  </a>
+                  <a href='/permanencia/delete/${dado.id}}' type="button" class="btn btn-outline-danger botoesRedondos"  title="Apagar Permanência">
+                    <img src="{{asset('img/iconesSVG/trash.svg')}}">
+                  </a>
                 </td>
               </tr>
             `
