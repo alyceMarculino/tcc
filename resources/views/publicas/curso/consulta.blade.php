@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.nav_aluno')
 @section('styles')
   <link rel="stylesheet" href="{{asset('css/curso/consulta.css')}}">
 @endsection
 
 @section('content') 
   <div class="listaDeProfessores">
-    <h2> Lista de Professores do {{$area->nome}} </h2>
+    <h2> Lista de Professores de/o {{$area->nome}} </h2>
 
     <div id="accordion">
       @foreach ($area->professores as $professor)
