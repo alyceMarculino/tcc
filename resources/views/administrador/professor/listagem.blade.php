@@ -45,9 +45,13 @@
                       <td>{{$permanencia->sala}}</td>
                       <td >
                         <a href='/permanencia/edita/{{$permanencia->id}}' type="button" 
-                          class="btn btn-outline-primary">Editar </a>
+                          class="btn btn-outline-primary botoesRedondos" title="Editar Permanência">
+                          <img src="{{asset('img/iconesSVG/pen.svg')}}"> 
+                        </a>
                         <a href='/permanencia/delete/{{$permanencia->id}}'type="button" 
-                          class="btn btn-outline-danger">Apagar</a>
+                          class="btn btn-outline-danger botoesRedondos" title="Apagar Permanência">
+                          <img src="{{asset('img/iconesSVG/trash.svg')}}">
+                        </a>
                       </td>
                     </tr>
                   @endforeach

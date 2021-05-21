@@ -9,7 +9,7 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header">
-            Login
+            Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul
           </div>
 
           <div class="card-body">
