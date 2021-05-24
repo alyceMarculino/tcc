@@ -126,7 +126,8 @@
             <optgroup label="Bloco E">
               <option value="E101"> E101 </option>
             </optgroup>
-            <optgroup label="Salas Modulares">
+            <optgroup label="Salas Extras">
+              <option value="Biblioteca"> Biblioteca </option>
               <option value="Modular 1"> Modular 1 </option>
               <option value="Modular 2"> Modular 2 </option>
               <option value="Modular 3"> Modular 3 </option>
