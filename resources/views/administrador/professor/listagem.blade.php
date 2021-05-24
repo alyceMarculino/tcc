@@ -24,9 +24,9 @@
 
         <div id="collapse{{$professor->id}}" class="collapse" aria-labelledby="heading{{$professor->id}}" data-parent="#accordion">
           <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-              <thead class="thead-dark">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
                   <tr>
                     <th scope="col">Dia</th>
                     <th scope="col">Inicio</th>
@@ -36,26 +36,26 @@
                   </tr>
                 </thead>
 
-                <tbody>
-                  @foreach ($professor->permanencias as $permanencia)
-                    <tr>
-                      <td scope="row">{{$permanencia->dia}}</td>
-                      <td>{{$permanencia->horaInicio}}</td>
-                      <td>{{$permanencia->horaFinal}}</td>
-                      <td>{{$permanencia->sala}}</td>
-                      <td >
-                        <a href='/permanencia/edita/{{$permanencia->id}}' type="button" 
-                          class="btn btn-outline-primary botoesRedondos" title="Editar Permanência">
-                          <img src="{{asset('img/iconesSVG/pen.svg')}}"> 
-                        </a>
-                        <a href='/permanencia/delete/{{$permanencia->id}}'type="button" 
-                          class="btn btn-outline-danger botoesRedondos" title="Apagar Permanência">
-                          <img src="{{asset('img/iconesSVG/trash.svg')}}">
-                        </a>
-                      </td>
-                    </tr>
-                  @endforeach
-                </tbody>
+                  <tbody>
+                    @foreach ($professor->permanencias as $permanencia)
+                      <tr>
+                        <td scope="row">{{$permanencia->dia}}</td>
+                        <td>{{$permanencia->horaInicio}}</td>
+                        <td>{{$permanencia->horaFinal}}</td>
+                        <td>{{$permanencia->sala}}</td>
+                        <td >
+                          <a href='/permanencia/edita/{{$permanencia->id}}' type="button" 
+                            class="btn btn-outline-primary botoesRedondos" title="Editar Permanência">
+                            <img src="{{asset('img/iconesSVG/pen.svg')}}"> 
+                          </a>
+                          <a href='/permanencia/delete/{{$permanencia->id}}'type="button" 
+                            class="btn btn-outline-danger botoesRedondos" title="Apagar Permanência">
+                            <img src="{{asset('img/iconesSVG/trash.svg')}}">
+                          </a>
+                        </td>
+                      </tr>
+                    @endforeach
+                  </tbody>
               </table>
             </div>
           </div>

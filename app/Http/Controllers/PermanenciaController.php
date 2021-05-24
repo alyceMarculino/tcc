@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class PermanenciaController extends Controller {
 
-  public function listarTodas(){
-    $permanencias = Permanencia::all();
-    return view('permanencia.listar')-> with('permanencias', $permanencias);
-  }
-
   public function cadastro(){
     $professores = Professor::all();
     $areas = Area::all();
@@ -47,5 +42,15 @@ class PermanenciaController extends Controller {
     $permanencia = Permanencia::find($id);
     $permanencia->delete();
     return redirect('/professor/listagem');
+  }
+
+  public function confirmarExcluirTodas(){
+    return view('administrador.permanencia.confirmacao');
+  }
+
+  public function apagarTodasPermanencias(){
+    Permanencia::truncate();
+    $professores = Professor::orderBy('nome', 'asc')->paginate(25);
+    return view('administrador.professor.listagem', compact('professores'));
   }
 }

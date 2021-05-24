@@ -36,6 +36,8 @@ Route::get('/permanencia/cadastro', 'PermanenciaController@cadastro')->name('per
 Route::post('/permanencia/salvar', 'PermanenciaController@salvar')->name('permanenciaSalvar')->middleware('auth');
 Route::get('/permanencia/edita/{id}', 'PermanenciaController@editar')->middleware('auth');
 Route::get('/permanencia/delete/{id}', 'PermanenciaController@excluir')->middleware('auth');
+Route::get('/permanencia/excluirTodas', 'PermanenciaController@confirmarExcluirTodas')->name('excluirTodas')->middleware('auth');
+Route::get('/permanencia/excluir', 'PermanenciaController@apagarTodasPermanencias')->name('excluirTodasPermanencias')->middleware('auth');
 // Administrador Parte do Professor
 Route::get('/professorAdmin/consultaNome', 'ProfessorController@consultaAdmin')->name('consultaNomeAdmin')->middleware('auth');
 Route::get('/professor/cadastro', 'ProfessorController@cadastro')->name('professorCadastro')->middleware('auth');
