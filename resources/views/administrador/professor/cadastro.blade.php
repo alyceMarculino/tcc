@@ -9,7 +9,7 @@
     @csrf
     <div class="form-row">
       <div class="col-sm-4 col-md-3 col-lg-3"> 
-        <label for="id" class="visually-hidden"> Identificar do Sistema </label>
+        <label for="id" class="visually-hidden"> Identificador do Sistema </label>
         <input readonly type="text" class="form-control" id="id" name="id" value="{{$professor->id}}">
       </div>
       <div class="col-sm-4 col-md-6 col-lg-6">
