@@ -53,24 +53,26 @@
 
     $('.professorPesquisado').change(function() {
       var idSelecionado = ($(this).val());
-      console.log(idSelecionado);
-      console.log(!idSelecionado.length);
       if(!idSelecionado.length){
         return;
       }
       $.get(
         "/professor/buscaProfessor/"+idSelecionado,
         function (data) {
+          console.log("passo 1")
           dadosProfessor.find('.alert').addClass('d-none');
           tabelaPermanencia.find('.alert').addClass('d-none');
           if(!data.professor){
             dadosProfessor.addClass('d-none');
             return;
+            console.log("passo 2")
           }
           dadosProfessor.removeClass('d-none');
           nomeProfessor.html(data.professor.nome);
           if(!data.permanencias.length){
+            console.log("passo 3")
             dadosProfessor.find('.alert').removeClass('d-none');
+            tabelaPermanencia.find('.alert').addClass('d-none');
             return;
           }
           completarTabela(data.permanencias);
@@ -79,11 +81,10 @@
       )
 
       function completarTabela(dados) {
-        console.log(dados);
+        console.log("passo 4");
         tabelaPermanencia.find('tbody').html('');
         tabelaPermanencia.removeClass('d-none');
         dados.map((dado)=>{
-          console.log(dado);
           tabelaPermanencia.find('tbody').append(
             `
               <tr>
