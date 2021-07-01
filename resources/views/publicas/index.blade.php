@@ -9,7 +9,7 @@
     <div class="card mt-2 shadow-sm">
       <img src="{{asset('img/aluno/2.png')}}">
       <div class="card-body">                 
-        <p> Consulta de permanências de materias do Núcleo Comum. (Ex: Matematica)</p>
+        <p> Consulta de permanências de materias comuns entre cursos. (Ex: Matematica)</p>
         <a href="{{route('materiaIndex')}}" class="btn btn-sm btn-outline-success btn-block"> Ir agora </a>
       </div>
     </div>

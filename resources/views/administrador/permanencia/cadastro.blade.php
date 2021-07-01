@@ -9,7 +9,7 @@
       @csrf
         <div class="row">
           <div class="col-sm-3 col-md-4 col-lg-3 d-none">
-            <label for="id" class="visually-hidden"> Identificar do Sistema </label>
+            <label for="id" class="visually-hidden"> ID do Sistema </label>
             <input readonly type="text" class="form-control" id="id" name="id" value="">
           </div>
           <div class="col">

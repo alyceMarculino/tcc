@@ -9,11 +9,11 @@
       @csrf
         <div class="row">
           <div class="col-sm-3 col-md-4 col-lg-3">
-            <label for="id" class="visually-hidden"> Identificar do Sistema </label>
+            <label for="id" class="visually-hidden"> ID do Sistema </label>
             <input readonly type="text" class="form-control" id="id" name="id" value="{{$permanencia->id}}">
           </div>
           <div class="col">
-            <label for="id" class="visually-hidden"> Identificar do Professor </label>
+            <label for="id" class="visually-hidden"> ID do Professor </label>
             <input readonly type="text" class="form-control" id="idDoProfessor" name="idDoProfessor" value="{{$permanencia->professor_id}}">
             <div id="nomeHelp" class="form-text">Você não pode alterar o professor da permanência.</div>
           </div>
@@ -103,11 +103,39 @@
           <label for="salaDaPermanencia" class="visually-hidden"> Sala </label>
           <select class="form-control" id="salaDaPermanencia" name="salaDaPermanencia">
             <option value="{{old('sala', $permanencia->sala)}}"> {{old('sala', $permanencia->sala)}} </option>
-            <option value="A101"> A101 </option>
-            <option value="B101"> B101 </option>
-            <option value="C101"> C101 </option>
-            <option value="D101"> D101 </option>
-            <option value="E101"> E101 </option>
+            <optgroup label="Bloco A">
+              <option value="A104"> A104 </option>
+              <option value="A105"> A105 </option>
+              <option value="A106"> A106 </option>
+              <option value="A202"> A202 </option>
+              <option value="A203"> A203 </option>
+              <option value="A206"> A206 </option>
+            </optgroup>
+            <optgroup label="Bloco B">
+              <option value="B101"> B101 </option>
+            </optgroup>
+            <optgroup label="Bloco C">
+              <option value="C101"> C101 </option>
+            </optgroup>
+            <optgroup label="Bloco D">
+              <option value="D201"> D201 </option>
+              <option value="D202"> D202 </option>
+              <option value="D203"> D203 </option>
+              <option value="D204"> D204 </option>
+              <option value="D205"> D205 </option>
+              <option value="D206"> D206 </option>
+            </optgroup>
+            <optgroup label="Bloco E">
+              <option value="E101"> E101 </option>
+            </optgroup>
+            <optgroup label="Salas Extras">
+              <option value="Biblioteca"> Biblioteca </option>
+              <option value="Modular 1"> Modular 1 </option>
+              <option value="Modular 2"> Modular 2 </option>
+              <option value="Modular 3"> Modular 3 </option>
+              <option value="Modular 4"> Modular 4 </option>
+            </optgroup>
+          </select>
           </select>
         </div>
       </div>

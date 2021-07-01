@@ -7,7 +7,7 @@
 @section('content')
   <section class="container-input">
     <select class="professorPesquisado">
-      <option value="default" selected="selected">Selecione o nome do professor</option>
+      <option value="default" selected="selected">Digite o nome do professor</option>
     </select>
   </section>
 
@@ -69,6 +69,7 @@
           dadosProfessor.removeClass('d-none');
           nomeProfessor.html(data.professor.nome);
           if(!data.permanencias.length){
+            tabelaPermanencia.find('.alert').addClass('d-none');
             dadosProfessor.find('.alert').removeClass('d-none');
             return;
           }

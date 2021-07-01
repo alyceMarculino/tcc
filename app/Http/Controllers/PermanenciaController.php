@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PermanenciaController extends Controller {
 
   public function cadastro(){
-    $professores = Professor::all();
+    $professores = Professor::orderBy('nome', 'asc')->get();
     $areas = Area::all();
     $permanencia = Permanencia::all();
     return view('administrador.permanencia.cadastro', compact('professores', 'areas', 'permanencia'));

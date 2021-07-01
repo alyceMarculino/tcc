@@ -7,7 +7,7 @@
 @section('content')
   <section class="container-input">
     <select class="professorPesquisado">
-      <option value="default" selected="selected">Selecione o nome do professor</option>
+      <option value="default" selected="selected">Digite o nome do professor</option>
     </select>
   </section>
 

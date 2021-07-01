@@ -45,11 +45,6 @@ Route::post('/professor/salvar', 'ProfessorController@salvar')->name('professorS
 Route::get('/professor/edita/{id}', 'ProfessorController@editar')->middleware('auth');
 Route::get('/professor/delete/{id}', 'ProfessorController@excluir')->middleware('auth');
 
-// Administrador Parte de Materias
-/* Paginas de tipo de areas */
-// Route::get('/area/listagem', 'AreaController@listagem')->name('areaListagem')->middleware('auth');
-// Route::get('/area/cadastro', 'AreaController@cadastro')->name('areaCadastro')->middleware('auth');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

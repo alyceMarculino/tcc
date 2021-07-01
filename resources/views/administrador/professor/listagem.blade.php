@@ -5,9 +5,9 @@
 
 @section('content')
   <div class="alert alert-info" role="alert">
-    Abaixo terá a tabela com os horarios dos professores cadastrados 
-    no sistema com seus respectivos horarios de permanencia, 
-    clique no nome para expandir e aparecer os horarios de permanencias.
+  Abaixo terá a tabela com os horários dos professores cadastrados no 
+  sistema com seus respectivos horários de permanência, 
+  clique no nome para expandir e aparecer os horários de permanências.
   </div>
 
   <div id="accordion">
